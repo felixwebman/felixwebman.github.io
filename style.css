@@ -151,3 +151,10 @@ img.logo {
     border-radius: 50%;  /* makes it circular */
     object-fit: cover;   /* ensures the image fills the circle without stretching */
 }
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
