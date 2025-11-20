@@ -1,4 +1,6 @@
-/* Reset default styles */
+/* --------------------------------------------- */
+/* RESET + GLOBAL SETTINGS */
+/* --------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +8,15 @@
 }
 
 body {
-    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #2c3e50;
 }
 
+/* --------------------------------------------- */
+/* HEADER */
+/* --------------------------------------------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -22,10 +26,15 @@ header {
     color: white;
 }
 
+/* Circular logo */
 header .logo img {
     height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+/* NAVIGATION */
 nav ul {
     list-style: none;
     display: flex;
@@ -40,87 +49,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f39c12; /* subtle hover effect */
+    color: #f39c12;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+nav a:link,
+nav a:visited {
+    color: white;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #2980b9;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 28px;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-.cta-button:hover {
-    background-color: #1c5d91;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 0 15px;
-}
-
-.product-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    text-align: center;
-}
-/* Product card images */
-.product-card .product-image {
-    width: 100%;          /* full width of the card */
-    max-width: 300px;     /* optional limit */
-    height: auto;         /* maintain aspect ratio */
-    display: block;
-    margin: 0 auto 15px;  /* center image and add spacing below */
-    border-radius: 10px;  /* rounded corners */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
-    object-fit: cover;
-}
-
-footer {
-    text-align: center;
-    padding: 25px 20px;
-    background-color: #1a1a1a;
-    color: #ccc;
-    font-size: 0.9rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    .cta-button { padding: 10px 20px; font-size: 0.95rem; }
-}
-
+/* --------------------------------------------- */
+/* HERO SECTION */
+/* --------------------------------------------- */
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 80px 20px;
     background-color: #f9f9fb;
@@ -142,19 +85,91 @@ footer {
     max-width: 90%;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    object-fit: cover;
 }
 
-/* Circular logo styling */
-img.logo {
-    height: 60px;        /* size of the logo */
-    width: 60px;         /* same as height for perfect circle */
-    border-radius: 50%;  /* makes it circular */
-    object-fit: cover;   /* ensures the image fills the circle without stretching */
+/* --------------------------------------------- */
+/* PAGE CONTAINER */
+/* --------------------------------------------- */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 15px;
 }
 
-img {
+/* --------------------------------------------- */
+/* PRODUCT CARDS */
+/* --------------------------------------------- */
+.product-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Product images */
+.product-card .product-image {
     width: 100%;
+    max-width: 280px;
     height: auto;
-    display: block;
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Product code styling */
+.product-code {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------- */
+/* BUTTONS */
+/* --------------------------------------------- */
+.cta-button {
+    display: inline-block;
+    background-color: #2980b9;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1c5d91;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* --------------------------------------------- */
+/* FOOTER */
+/* --------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* --------------------------------------------- */
+/* RESPONSIVE */
+/* --------------------------------------------- */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .hero h1 { font-size: 2.3rem; }
+    .cta-button { padding: 10px 20px; }
 }
