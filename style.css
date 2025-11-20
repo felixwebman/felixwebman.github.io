@@ -89,6 +89,17 @@ p {
     background-color: #fff;
     text-align: center;
 }
+/* Product card images */
+.product-card .product-image {
+    width: 100%;          /* full width of the card */
+    max-width: 300px;     /* optional limit */
+    height: auto;         /* maintain aspect ratio */
+    display: block;
+    margin: 0 auto 15px;  /* center image and add spacing below */
+    border-radius: 10px;  /* rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+    object-fit: cover;
+}
 
 footer {
     text-align: center;
