@@ -179,15 +179,15 @@ footer {
 /* --------------------------------------------- */
 .price {
     font-size: 1.1rem;
-    color: #e74c3c; /* red for discounted price */
+    color: #27ae60; /* bold green for discounted price */
     font-weight: bold;
     margin-bottom: 12px;
 }
 
 .original-price {
     text-decoration: line-through;
-    color: #888;
-    font-weight: normal;
+    color: #e74c3c; /* red for original price */
+    font-weight: bold;
     margin-left: 8px;
 }
 
