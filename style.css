@@ -190,3 +190,43 @@ footer {
         font-size: 0.95rem;
     }
 }
+
+/* --------------------------------------------- */
+/* STACKED PRODUCT PREVIEW ON HOMEPAGE */
+/* --------------------------------------------- */
+.product-stack {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    margin: 40px auto;
+    cursor: pointer;
+}
+
+.product-stack .stacked-image {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.stacked-1 { z-index: 5; top: 0; left: 40px; transform: rotate(-8deg); }
+.stacked-2 { z-index: 4; top: 10px; left: 30px; transform: rotate(-4deg); }
+.stacked-3 { z-index: 3; top: 20px; left: 20px; transform: rotate(0deg); }
+.stacked-4 { z-index: 2; top: 30px; left: 10px; transform: rotate(4deg); }
+.stacked-5 { z-index: 1; top: 40px; left: 0; transform: rotate(8deg); }
+
+.product-stack:hover .stacked-image {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.stack-text {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    font-weight: 500;
+}
