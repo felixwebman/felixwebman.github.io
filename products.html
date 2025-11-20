@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - DigitalBoostHub</title>
+    <title>Riya Online Shopping | Buy Stylish Clothes Online – Your One-Stop Fashion Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <h1>Our Products</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
+            <a href="products.html" class="active">Products</a>
             <a href="about.html">About</a>
         </nav>
     </header>
@@ -26,7 +26,12 @@
             <img src="images/product01.png" alt="Product 01" class="product-image" loading="lazy">
             <p class="product-code">Code: T6H10001</p>
             <h3>Product 01</h3>
-            <a href="#" class="cta-button">Buy Now</a>
+            <p class="price">$6.99 <span class="original-price">$15.99</span></p>
+            <div class="button-group">
+                <a href="checkout.html" class="cta-button buy-button">Buy Now</a>
+                <button class="cta-button add-to-cart-button">Add to Cart</button>
+            </div>
+            <p class="cart-message" style="display:none;">Added to cart</p>
         </div>
 
         <!-- PRODUCT 2 -->
@@ -34,7 +39,12 @@
             <img src="images/product02.png" alt="Product 02" class="product-image" loading="lazy">
             <p class="product-code">Code: T6H10002</p>
             <h3>Product 02</h3>
-            <a href="#" class="cta-button">Buy Now</a>
+            <p class="price">$6.99 <span class="original-price">$15.99</span></p>
+            <div class="button-group">
+                <a href="checkout.html" class="cta-button buy-button">Buy Now</a>
+                <button class="cta-button add-to-cart-button">Add to Cart</button>
+            </div>
+            <p class="cart-message" style="display:none;">Added to cart</p>
         </div>
 
         <!-- PRODUCT 3 -->
@@ -42,7 +52,12 @@
             <img src="images/product03.png" alt="Product 03" class="product-image" loading="lazy">
             <p class="product-code">Code: T6H10003</p>
             <h3>Product 03</h3>
-            <a href="#" class="cta-button">Buy Now</a>
+            <p class="price">$6.99 <span class="original-price">$15.99</span></p>
+            <div class="button-group">
+                <a href="checkout.html" class="cta-button buy-button">Buy Now</a>
+                <button class="cta-button add-to-cart-button">Add to Cart</button>
+            </div>
+            <p class="cart-message" style="display:none;">Added to cart</p>
         </div>
 
         <!-- PRODUCT 4 -->
@@ -50,7 +65,12 @@
             <img src="images/product04.png" alt="Product 04" class="product-image" loading="lazy">
             <p class="product-code">Code: T6H10004</p>
             <h3>Product 04</h3>
-            <a href="#" class="cta-button">Buy Now</a>
+            <p class="price">$6.99 <span class="original-price">$15.99</span></p>
+            <div class="button-group">
+                <a href="checkout.html" class="cta-button buy-button">Buy Now</a>
+                <button class="cta-button add-to-cart-button">Add to Cart</button>
+            </div>
+            <p class="cart-message" style="display:none;">Added to cart</p>
         </div>
 
         <!-- PRODUCT 5 -->
@@ -58,15 +78,33 @@
             <img src="images/product05.png" alt="Product 05" class="product-image" loading="lazy">
             <p class="product-code">Code: T6H10005</p>
             <h3>Product 05</h3>
-            <a href="#" class="cta-button">Buy Now</a>
+            <p class="price">$6.99 <span class="original-price">$15.99</span></p>
+            <div class="button-group">
+                <a href="checkout.html" class="cta-button buy-button">Buy Now</a>
+                <button class="cta-button add-to-cart-button">Add to Cart</button>
+            </div>
+            <p class="cart-message" style="display:none;">Added to cart</p>
         </div>
 
     </div>
 
     <!-- FOOTER -->
     <footer>
-        &copy; 2025 DigitalBoostHub. All rights reserved.
+        &copy; 2025 Riya Online Shopping KH. All rights reserved.
     </footer>
+
+    <!-- ADD TO CART SCRIPT -->
+    <script>
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.product-card');
+                const message = card.querySelector('.cart-message');
+                message.style.display = 'block';
+                setTimeout(() => { message.style.display = 'none'; }, 2000);
+            });
+        });
+    </script>
 
 </body>
 </html>
