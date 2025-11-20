@@ -133,3 +133,10 @@ footer {
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+/* Circular logo styling */
+img.logo {
+    height: 60px;        /* size of the logo */
+    width: 60px;         /* same as height for perfect circle */
+    border-radius: 50%;  /* makes it circular */
+    object-fit: cover;   /* ensures the image fills the circle without stretching */
+}
